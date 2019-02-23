@@ -1,0 +1,19 @@
+{
+  "name": "philosopher_bot",
+  "version": "1.0.0",
+  "description": "Chatbot that periodically outputs various philosophers' quotes to help you through hard times.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apiai": "^4.0.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "request": "^2.88.0",
+    "save": "^2.3.2",
+    "sqlite3": "^4.0.6"
+  }
+}
