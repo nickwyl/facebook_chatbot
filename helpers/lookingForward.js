@@ -19,20 +19,20 @@ module.exports = (senderId, result) => {
 		       console.error(err.message);
 		    }
 
-		    var key1 = row.key;
+		    var quoteKey = row.key;
 		    var lengthSum = 0;
 
-			var i;
+		    var i;
 		    for(i=1; i<row.moreQuote; i++) {
-		    	key1=key1+1;
-		    	db.get("SELECT * FROM quotes WHERE key=?", key1, (err,row1) => {
+		    	quoteKey=quoteKey+1;
+		    	db.get("SELECT * FROM quotes WHERE key=?", quoteKey, (err,row1) => {
 
 			    	lengthSum+=row1.quote.length;
 
 			    	(function() {
-						setTimeout(waitForMessage, lengthSum*30, senderId); 
-					})();
-					setTimeout(sendTextMessage, lengthSum*50, senderId, row1.quote);
+					setTimeout(waitForMessage, lengthSum*30, senderId); 
+				})();
+				setTimeout(sendTextMessage, lengthSum*50, senderId, row1.quote);
 		    	});
 		    }
 	  	});
