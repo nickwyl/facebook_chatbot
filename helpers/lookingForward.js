@@ -8,7 +8,7 @@ module.exports = (senderId, result) => {
 	  if (err) {
 	    return console.error(err.message);
 	  }
-	  console.log("Connected to the NewDB.db database.");
+	  console.log("Connected to the ExtraQuotes.db database.");
 	});
 
 
