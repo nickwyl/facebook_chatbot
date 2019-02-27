@@ -24,7 +24,7 @@ module.exports = (senderId, result) => {
 
 		    var i;
 		    for(i=1; i<row.moreQuote; i++) {
-		    	quoteKey=quoteKey+1;
+		    	quoteKey++;
 		    	db.get("SELECT * FROM quotes WHERE key=?", quoteKey, (err,row1) => {
 
 			    	lengthSum+=row1.quote.length;
